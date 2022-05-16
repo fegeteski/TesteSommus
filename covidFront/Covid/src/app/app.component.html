@@ -1,0 +1,37 @@
+
+  <router-outlet></router-outlet>
+  <div class="Content">
+
+    <div class="Title">
+      MÉDIA MÓVEL COVID-19
+    </div>
+
+    <form class="Funtion mt-4" (submit)="realizarConsulta()">
+      <input type="date" [(ngModel)]="covidDate"[ngModelOptions]="{standalone: true}">
+      <input type="number"  [(ngModel)]="totalWeek"[ngModelOptions]="{standalone: true}">
+      <button type="submit" class="btn btn-primary" [disabled]="!covidDate">ENVIAR</button>
+    </form>
+  
+    <table class="table bg-white mt-4">
+      <thead>
+        <tr>
+          <th scope="col">Semana</th>
+          <th scope="col">Casos</th>
+          <th scope="col">Mortes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let resultado of averageList">
+          <th scope="row">{{resultado.week+1}}</th>
+          <td>{{resultado.cases | number}}</td>
+          <td>{{resultado.deaths | number}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+  </div>
+

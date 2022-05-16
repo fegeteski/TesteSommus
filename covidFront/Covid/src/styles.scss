@@ -1,0 +1,38 @@
+
+
+/* You can add global styles to this file, and also import other style files */
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url("./assets/COVIDPNG2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: center top;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.teste{
+    color: white;
+    font-size: 32px;
+}
+.Content{
+display: flex;
+flex-direction: column;
+}
+.Funtion{
+    display: flex;
+    flex-direction: column;
+}
+.Title{
+    color: white;
+    font-size: 32px;
+}
+
+
+
